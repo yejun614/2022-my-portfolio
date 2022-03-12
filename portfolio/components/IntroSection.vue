@@ -109,15 +109,15 @@ export default {
   }
 
   #welcome-typing {
-    width: 800px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: coral;
-    font-size: 30px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
 
@@ -134,9 +134,33 @@ export default {
     position: absolute;
     bottom: 25px;
     left: 50%;
-    margin-left: -57px;
+    margin-left: -30px;
 
     opacity: 0;
     animation: fade-in 1s forwards 4s;
+  }
+
+  @media screen and (min-width: 600px) {
+    #welcome-typing {
+      width: 600px;
+      height: 200px;
+      font-size: 20px;
+    }
+
+    .scroll {
+      margin-left: -40px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #welcome-typing {
+      width: 800px;
+      height: 300px;
+      font-size: 30px;
+    }
+
+    .scroll {
+      margin-left: -57px;
+    }
   }
 </style>

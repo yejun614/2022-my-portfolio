@@ -7,10 +7,10 @@
     <div ref="badge" class="badge" />
 
     <div class="tech">
-      <iframe width="600px" src="https://github-profile-trophy.vercel.app/?username=yejun614" frameborder="0" />
-      <iframe width="600px" src="https://github-readme-stats.vercel.app/api?username=yejun614&show_icons=true" frameborder="0" />
-      <iframe width="600px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" frameborder="0" />
-      <a href="https://solved.ac/profile/yejun614" target="_blink">
+      <iframe class="trophy" src="https://github-profile-trophy.vercel.app/?username=yejun614" frameborder="0" />
+      <iframe class="stats" src="https://github-readme-stats.vercel.app/api?username=yejun614&show_icons=true" frameborder="0" />
+      <iframe class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" frameborder="0" />
+      <a class="solved" href="https://solved.ac/profile/yejun614" target="_blink">
         <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yejun614" alt="boj badge">
       </a>
     </div>
@@ -57,7 +57,7 @@ export default {
 
 <style>
   #my-skills .badge {
-    width: 800px;
+    width: 90%;
     margin-bottom: 50px;
     text-align: center;
   }
@@ -67,6 +67,14 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .trophy {
+    display: none;
   }
 
   #my-skills .links {
@@ -80,7 +88,7 @@ export default {
 
   #my-skills .links a {
     color: coral;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: bold;
     text-decoration: blink;
 
@@ -95,5 +103,33 @@ export default {
   #my-skills .links a:hover {
     color: white;
     background-color: coral;
+  }
+
+  @media screen and (min-width: 600px) {
+    iframe {
+      width: 600px;
+    }
+
+    .trophy {
+      display: inline;
+    }
+
+    #my-skills .links a {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    iframe {
+      width: 800px;
+    }
+
+    #my-skills .badge {
+      width: 800px;
+    }
+
+    #my-skills .links a {
+      font-size: 17px;
+    }
   }
 </style>

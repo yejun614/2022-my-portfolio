@@ -46,21 +46,20 @@ export default {
 <style>
   #my-works .cover {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   #my-works .cover .box {
     width: 180px;
-    height: 180px;
+    height: 30px;
     padding: 20px;
     margin: 10px;
 
     background-color: #333;
-    border-radius: 20px;
+    border-radius: 10px;
 
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     text-decoration: blink;
@@ -74,5 +73,27 @@ export default {
 
   #my-works .cover .box:hover {
     box-shadow: 3px 3px 12px rgba(0,0,0,.5);
+  }
+
+  @media screen and (min-width: 600px) {
+    #my-works .cover {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    #my-works .cover .box {
+      width: 180px;
+      height: 180px;
+      border-radius: 20px;
+
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #my-works .cover .box {
+      font-size: 20px;
+    }
   }
 </style>

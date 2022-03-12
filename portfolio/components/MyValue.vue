@@ -44,58 +44,119 @@ export default {
 
 <style>
   #my-value {
-    padding-top: 100px;
+    padding-top: 0;
   }
 
   #my-value .box {
-    margin: 20px 0;
+    width: 80%;
+    margin: 5px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #my-value .box img {
-    width: 400px;
-    position: relative;
-    right: 50px;
-    border: 3px solid black;
-    padding: 20px;
+    display: none;
   }
 
   #my-value .box p {
-    width: 500px;
     padding: 20px 30px;
 
-    font-size: 20px;
+    font-size: 12px;
 
     background-color: white;
-    border: 3px solid black;
-
-    position: relative;
-    bottom: 180px;
-    left: 150px;
+    border: 1px solid black;
   }
 
-  #my-value .box.reverse img {
-    right: 0;
-    left: 250px;
-  }
-
-  #my-value .box.reverse p {
-    left: 0;
-    bottom: 300px;
+  #my-value .messages {
+    width: 60%;
+    margin-top: 50px;
   }
 
   #my-value .messages p {
     color: rgba(0,0,0,.3);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    text-align: center;
-    padding: 15px 0;
-    letter-spacing: 1.5px;
-    word-spacing: 5px;
+    text-align: left;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    word-spacing: 2px;
     cursor: pointer;
     transition: color 300ms ease-in-out;
   }
 
   #my-value .messages p:hover {
     color: black;
+  }
+
+  @media screen and (min-width: 600px) {
+    #my-value {
+      padding-top: 100px;
+    }
+
+    #my-value .box {
+      display: inline;
+      margin: 20px 0;
+    }
+
+    #my-value .messages p {
+      font-size: 15px;
+      padding: 10px 0;
+      text-align: center;
+      letter-spacing: 1px;
+      word-spacing: 3px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #my-value .box {
+      width: fit-content;
+    }
+
+    #my-value .box img {
+      width: 400px;
+      position: relative;
+      right: 50px;
+      border: 3px solid black;
+      padding: 20px;
+      display: inline;
+    }
+
+    #my-value .box p {
+      width: 500px;
+      padding: 20px 30px;
+
+      font-size: 20px;
+
+      background-color: white;
+      border: 3px solid black;
+
+      position: relative;
+      bottom: 180px;
+      left: 150px;
+    }
+
+    #my-value .box.reverse img {
+      right: 0;
+      left: 250px;
+    }
+
+    #my-value .box.reverse p {
+      left: 0;
+      bottom: 300px;
+    }
+
+    #my-value .messages {
+      margin-top: 0;
+    }
+
+    #my-value .messages p {
+      font-size: 20px;
+      padding: 15px 0;
+      text-align: center;
+      letter-spacing: 1.5px;
+      word-spacing: 5px;
+    }
   }
 </style>

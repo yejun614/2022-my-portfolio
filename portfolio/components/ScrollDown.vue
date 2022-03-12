@@ -18,7 +18,7 @@ export default {
   }
 
   .scroll-down {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
     color: coral;
 
@@ -32,5 +32,17 @@ export default {
 
   .scroll-down > * {
     margin: 5px 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    .scroll-down {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .scroll-down {
+      font-size: 20px;
+    }
   }
 </style>

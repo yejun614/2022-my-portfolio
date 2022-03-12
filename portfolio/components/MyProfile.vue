@@ -44,20 +44,43 @@ export default {
   }
 
   #my-profile td {
-    padding: 5px 30px;
+    padding: 2px 10px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 12px;
   }
 
   #my-profile .messages {
+    width: 80%;
     margin-top: 100px;
   }
 
   #my-profile .messages p {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
 
     padding: 3px 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    #my-profile td {
+      padding: 3px 12px;
+      font-size: 15px;
+    }
+
+    #my-profile .messages p {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #my-profile td {
+      padding: 5px 30px;
+      font-size: 17px;
+    }
+
+    #my-profile .messages p {
+      font-size: 20px;
+    }
   }
 </style>

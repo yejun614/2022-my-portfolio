@@ -63,10 +63,10 @@ export default {
   #layout section h1 {
     color: coral;
     text-align: center;
-    font-size: 25px;
+    font-size: 16px;
     padding: 5px 3px;
     border-bottom: 3px solid coral;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   #intro, content {
@@ -104,5 +104,19 @@ export default {
     justify-content: center;
 
     z-index: 100;
+  }
+
+  @media screen and (min-width: 600px) {
+    #layout section h1 {
+      font-size: 18px;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #layout section h1 {
+      font-size: 25px;
+      margin-bottom: 100px;
+    }
   }
 </style>

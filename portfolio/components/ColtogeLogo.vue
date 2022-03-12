@@ -15,10 +15,9 @@ export default {
 <style>
   .coltoge-logo {
     width: fit-content;
-    height: 30px;
+    height: 20px;
     padding: 3px 20px;
-    margin: 20px;
-    border: 3px solid coral;
+    margin: 10px;
     border-radius: 7px;
     cursor: pointer;
 
@@ -30,7 +29,7 @@ export default {
   }
 
   .coltoge-logo a {
-    font-size: 15px;
+    font-size: 8px;
     color: coral;
     text-decoration: blink;
   }
@@ -41,5 +40,31 @@ export default {
 
   .coltoge-logo:hover a {
     color: white;
+  }
+
+  @media screen and (min-width: 600px) {
+    .coltoge-logo {
+      height: 25px;
+      padding: 3px 10px;
+      margin: 10px;
+    }
+
+    .coltoge-logo a {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .coltoge-logo {
+      height: 30px;
+      padding: 3px 20px;
+      margin: 20px;
+
+      border: 3px solid coral;
+    }
+
+    .coltoge-logo a {
+      font-size: 15px;
+    }
   }
 </style>
