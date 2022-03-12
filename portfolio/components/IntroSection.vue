@@ -106,7 +106,7 @@ export default {
     position: absolute;
     top: 10px;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -61px;
   }
 
   #welcome-typing {

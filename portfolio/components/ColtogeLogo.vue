@@ -29,7 +29,7 @@ export default {
   }
 
   .coltoge-logo a {
-    font-size: 8px;
+    font-size: 10px;
     color: coral;
     text-decoration: blink;
   }
