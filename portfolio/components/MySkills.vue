@@ -12,7 +12,7 @@
       <img class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" alt="top-langs">
 
       <a class="solved" href="https://solved.ac/profile/yejun614" target="_blink">
-        <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yejun614" alt="boj badge">
+        <img src="https://mazassumnida.wtf/api/v2/generate_badge?boj=yejun614" alt="boj badge">
       </a>
     </div>
 
