@@ -45,8 +45,10 @@ export default {
   @media screen and (min-width: 600px) {
     .coltoge-logo {
       height: 25px;
-      padding: 3px 10px;
+      padding: 3px 20px;
       margin: 10px;
+
+      border: 2px solid coral;
     }
 
     .coltoge-logo a {

@@ -104,8 +104,9 @@ export default {
 
   #logo {
     position: absolute;
-    top: 5px;
-    left: 13px;
+    top: 10px;
+    left: 50%;
+    margin-left: -60px;
   }
 
   #welcome-typing {
@@ -141,6 +142,13 @@ export default {
   }
 
   @media screen and (min-width: 600px) {
+    #logo {
+      position: absolute;
+      top: 5px;
+      left: 13px;
+      margin: 0;
+    }
+
     #welcome-typing {
       width: 600px;
       height: 200px;

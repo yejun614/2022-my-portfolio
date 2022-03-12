@@ -54,7 +54,7 @@ export default {
   }
 
   .top-nav ul li .im {
-    font-size: 8px;
+    font-size: 15px;
     margin-right: 1.5px;
   }
 
