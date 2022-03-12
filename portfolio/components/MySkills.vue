@@ -1,0 +1,99 @@
+<template>
+  <section id="my-skills">
+    <h1>
+      기술 스택
+    </h1>
+
+    <div ref="badge" class="badge" />
+
+    <div class="tech">
+      <iframe width="600px" src="https://github-profile-trophy.vercel.app/?username=yejun614" frameborder="0" />
+      <iframe width="600px" src="https://github-readme-stats.vercel.app/api?username=yejun614&show_icons=true" frameborder="0" />
+      <iframe width="600px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" frameborder="0" />
+      <a href="https://solved.ac/profile/yejun614" target="_blink">
+        <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yejun614" alt="boj badge">
+      </a>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/yejun614" target="_blink">Github Profile</a>
+      <a href="https://solved.ac/profile/yejun614" target="_blink">Solved.ac Profile</a>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'MySkills',
+  data () {
+    return {
+      skills: [
+        { name: 'python', hex: '306998', logo: 'python' },
+        { name: 'go', hex: '29BEB0', logo: 'go' },
+        { name: 'javascript', hex: 'F0DB4F', logo: 'javascript' },
+        { name: 'typescript', hex: '007acc', logo: 'typescript' },
+        { name: 'cplusplus', hex: '044F88', logo: 'cplusplus' },
+        { name: 'amazon%20aws', hex: 'FF9900', logo: 'amazon%20aws' },
+        { name: 'vercel', hex: '000000', logo: 'vercel' },
+        { name: 'unity', hex: '222c37', logo: 'unity' },
+        { name: 'flask', hex: '333333', logo: 'flask' },
+        { name: 'vue.js', hex: '41B883', logo: 'vue.js' },
+        { name: 'nuxt.js', hex: '35495E', logo: 'nuxt.js' }
+      ]
+    }
+  },
+  mounted () {
+    const element = this.$refs.badge
+
+    this.skills.forEach((skill) => {
+      const badge = document.createElement('img')
+      badge.src = `https://img.shields.io/badge/${skill.name}-${skill.hex}?style=for-the-badge&logo=${skill.logo}&logoColor=white`
+
+      element.appendChild(badge)
+    })
+  }
+}
+</script>
+
+<style>
+  #my-skills .badge {
+    width: 800px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  #my-skills .tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #my-skills .links {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #my-skills .links a {
+    color: coral;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: blink;
+
+    padding: 5px 10px;
+    margin: 5px 0;
+    border: 3px solid coral;
+    border-radius: 5px;
+
+    transition: all 300ms ease-in-out;
+  }
+
+  #my-skills .links a:hover {
+    color: white;
+    background-color: coral;
+  }
+</style>
