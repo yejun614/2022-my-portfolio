@@ -7,9 +7,10 @@
     <div ref="badge" class="badge" />
 
     <div class="tech">
-      <iframe class="trophy" src="https://github-profile-trophy.vercel.app/?username=yejun614" frameborder="0" />
-      <iframe class="stats" src="https://github-readme-stats.vercel.app/api?username=yejun614&show_icons=true" frameborder="0" />
-      <iframe class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" frameborder="0" />
+      <img class="trophy" src="https://github-profile-trophy.vercel.app/?username=yejun614" alt="trophy">
+      <img class="stats" src="https://github-readme-stats.vercel.app/api?username=yejun614&show_icons=true" alt="stats">
+      <img class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yejun614&show_icons=true&hide_border=true&title_color=004386&icon_color=004386&layout=compact" alt="top-langs">
+
       <a class="solved" href="https://solved.ac/profile/yejun614" target="_blink">
         <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yejun614" alt="boj badge">
       </a>
@@ -69,8 +70,9 @@ export default {
     justify-content: center;
   }
 
-  iframe {
-    width: 100%;
+  .tech img {
+    max-width: 90%;
+    margin: 20px 0;
   }
 
   .trophy {
@@ -106,8 +108,8 @@ export default {
   }
 
   @media screen and (min-width: 600px) {
-    iframe {
-      width: 600px;
+    .tech img {
+      max-width: 400px;
     }
 
     .trophy {
@@ -120,8 +122,8 @@ export default {
   }
 
   @media screen and (min-width: 1000px) {
-    iframe {
-      width: 800px;
+    .tech img {
+      max-width: 800px;
     }
 
     #my-skills .badge {
