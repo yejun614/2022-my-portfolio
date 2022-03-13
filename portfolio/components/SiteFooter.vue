@@ -35,7 +35,8 @@ export default {
   }
 
   #footer .info h3 {
-    color: white;
+    color: rgba(255,255,255,.5);
+    font-weight: normal;
     margin-bottom: 50px;
   }
 
