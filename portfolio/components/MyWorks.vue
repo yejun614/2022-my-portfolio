@@ -1,6 +1,6 @@
 <template>
   <section id="my-works">
-    <h1>도전의 흔적들.</h1>
+    <h1>작업물</h1>
 
     <div class="cover">
       <a
@@ -23,12 +23,12 @@ export default {
   data () {
     return {
       items: [
-        { id: 0, name: 'Tetris Game', color: '#FF9454', href: 'https://yejun614.github.io/html5-games/games/tetris/' },
-        { id: 1, name: 'Calendar', color: '#05C7F2', href: 'https://codepen.io/yejun614/pen/yLgwEJG' },
-        { id: 2, name: 'Color Picker', color: '#03588C', href: 'https://codepen.io/yejun614/pen/bGgvvwy' },
-        { id: 3, name: 'Color Code Convertor', color: '#E8704D', href: 'https://codepen.io/yejun614/pen/dyNjdeb' },
-        { id: 4, name: 'Algorithm', color: '#F25C05', href: 'https://github.com/yejun614/algorithm-solve' },
-        { id: 5, name: 'Arduino Education', color: '#012E40', href: 'https://github.com/yejun614/Arduino-Structure-and-Design' }
+        { id: 0, name: 'Tetris Game', color: '#05C7F2', href: 'https://yejun614.github.io/html5-games/games/tetris/' },
+        { id: 1, name: 'Calendar', color: '#03588C', href: 'https://codepen.io/yejun614/pen/yLgwEJG' },
+        { id: 2, name: 'Color Picker', color: '#012E40', href: 'https://codepen.io/yejun614/pen/bGgvvwy' },
+        { id: 3, name: 'Color Code Convertor', color: '#FF9454', href: 'https://codepen.io/yejun614/pen/dyNjdeb' },
+        { id: 4, name: 'Algorithm', color: '#E8704D', href: 'https://github.com/yejun614/algorithm-solve' },
+        { id: 5, name: 'Arduino Education', color: '#F25C05', href: 'https://github.com/yejun614/Arduino-Structure-and-Design' }
       ]
     }
   },
@@ -50,7 +50,7 @@ export default {
   }
 
   #my-works .cover .box {
-    width: 180px;
+    width: 300px;
     height: 30px;
     padding: 20px;
     margin: 10px;
@@ -87,13 +87,13 @@ export default {
       height: 180px;
       border-radius: 20px;
 
-      font-size: 18px;
+      font-size: 15px;
     }
   }
 
   @media screen and (min-width: 1000px) {
-    #my-works .cover .box {
-      font-size: 20px;
+    #my-works .cover {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 </style>

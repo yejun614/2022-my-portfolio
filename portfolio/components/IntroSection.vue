@@ -13,12 +13,20 @@
       <ColtogeLogo />
     </div>
 
-    <div id="welcome-typing">
-      <TypingAnim
-        text="Hello!\nI'm YeJun and Software Engineer."
-        :speed="50"
-        :delay="2000"
-      />
+    <div id="welcome-cover">
+      <div id="welcome-typing">
+        <TypingAnim
+          text="Hello!\nI'm YeJun and Software Engineer."
+          :speed="50"
+          :delay="2000"
+        />
+      </div>
+
+      <div id="welcome-typing-title">
+        <div class="circle red" />
+        <div class="circle yellow" />
+        <div class="circle green" />
+      </div>
     </div>
 
     <div class="scroll">
@@ -108,6 +116,10 @@ export default {
     margin-left: -61px;
   }
 
+  #welcome-cover {
+    position: relative;
+  }
+
   #welcome-typing {
     width: 300px;
     height: 150px;
@@ -125,10 +137,30 @@ export default {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
+
+  #welcome-typing-title {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+
+  #welcome-typing-title .circle {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+
+    float: left;
+    margin: 0 2.5px;
+  }
+
+  #welcome-typing-title .circle.red { background-color: #ff605c; }
+  #welcome-typing-title .circle.yellow { background-color: #ffbd44; }
+  #welcome-typing-title .circle.green { background-color: #00ca4e; }
 
   .scroll {
     position: absolute;
@@ -142,10 +174,7 @@ export default {
 
   @media screen and (min-width: 600px) {
     #logo {
-      position: absolute;
-      top: 5px;
-      left: 13px;
-      margin: 0;
+      margin-left: -64px;
     }
 
     #welcome-typing {
@@ -160,6 +189,10 @@ export default {
   }
 
   @media screen and (min-width: 1000px) {
+    #logo {
+      margin-left: -73px;
+    }
+
     #welcome-typing {
       width: 800px;
       height: 300px;

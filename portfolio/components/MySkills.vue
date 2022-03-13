@@ -17,8 +17,8 @@
     </div>
 
     <div class="links">
-      <a href="https://github.com/yejun614" target="_blink">Github Profile</a>
-      <a href="https://solved.ac/profile/yejun614" target="_blink">Solved.ac Profile</a>
+      <a href="https://github.com/yejun614" target="_blink">Github</a>
+      <a href="https://solved.ac/profile/yejun614" target="_blink">Solved.ac</a>
     </div>
   </section>
 </template>
@@ -90,13 +90,12 @@ export default {
 
   #my-skills .links a {
     color: coral;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: blink;
 
-    padding: 5px 10px;
+    padding: 5px 15px;
     margin: 5px 0;
-    border: 3px solid coral;
     border-radius: 5px;
 
     transition: all 300ms ease-in-out;
@@ -115,10 +114,6 @@ export default {
     .trophy {
       display: inline;
     }
-
-    #my-skills .links a {
-      font-size: 15px;
-    }
   }
 
   @media screen and (min-width: 1000px) {
@@ -128,10 +123,6 @@ export default {
 
     #my-skills .badge {
       width: 800px;
-    }
-
-    #my-skills .links a {
-      font-size: 17px;
     }
   }
 </style>

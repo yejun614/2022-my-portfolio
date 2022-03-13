@@ -2,27 +2,33 @@
   <section id="my-profile">
     <h1>WHO IS YEJUN</h1>
 
-    <table>
-      <tr>
-        <td>E-Mail</td>
-        <td>yejun614@naver.com</td>
-      </tr>
+    <div class="card" :class="{flip: isFlip}" @click="flipping()">
+      <table class="front">
+        <tr>
+          <td>E-Mail</td>
+          <td>yejun614@naver.com</td>
+        </tr>
 
-      <tr>
-        <td>학교</td>
-        <td>동의대학교 응용소프트웨어공학 전공 2학년 재학</td>
-      </tr>
+        <tr>
+          <td>학교</td>
+          <td>동의대학교 응용소프트웨어공학 전공 2학년 재학</td>
+        </tr>
 
-      <tr>
-        <td>좋아하는 것</td>
-        <td>캠핑가서 힐링하기.</td>
-      </tr>
+        <tr>
+          <td>좋아하는 것</td>
+          <td>캠핑가서 힐링하기.</td>
+        </tr>
 
-      <tr>
-        <td>싫어하는 것</td>
-        <td>무책임한 사람.</td>
-      </tr>
-    </table>
+        <tr>
+          <td>관심 분야</td>
+          <td>웹 사이트 제작, 클라우드, 데이터 엔지니어링</td>
+        </tr>
+      </table>
+
+      <div class="back">
+        <span>I am YEJUN, JUNG</span>
+      </div>
+    </div>
 
     <div class="messages">
       <p>코딩을 좋아하는 평범한 대학생 입니다.</p>
@@ -33,14 +39,55 @@
 
 <script>
 export default {
-  name: 'MyProfile'
+  name: 'MyProfile',
+  data () {
+    return {
+      isFlip: false
+    }
+  },
+  methods: {
+    flipping () {
+      this.isFlip = !this.isFlip
+    }
+  }
 }
 </script>
 
 <style>
+  #my-profile {
+    perspective: 600px;
+  }
+
+  #my-profile .card {
+    cursor: pointer;
+
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 300ms ease-in-out;
+
+    position: relative;
+  }
+
+  #my-profile .card:hover {
+    transform: translateX(-10px) rotateY(-10deg);
+  }
+
+  #my-profile .card.flip {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
   #my-profile table {
-    border: 3px solid black;
-    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+
+    background: rgb(91,160,255);
+    background: linear-gradient(45deg, rgba(91,160,255,1) 0%, rgba(255,161,161,1) 100%);
+
+    color: white;
+
+    padding: 30px 10px;
+    backface-visibility: hidden;
+    box-shadow: 3px 5px 10px rgba(0,0,0,.3);
   }
 
   #my-profile td {
@@ -49,14 +96,42 @@ export default {
     font-size: 12px;
   }
 
+  #my-profile .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: midnightblue;
+    transform: rotateY( 180deg );
+    backface-visibility: hidden;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #my-profile .back span {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 2px 5px;
+    border-bottom: 2px solid white;
+  }
+
   #my-profile .messages {
     width: 80%;
     margin-top: 100px;
   }
 
   #my-profile .messages p {
+    color: #777;
     font-size: 12px;
-    font-weight: bold;
     text-align: center;
 
     padding: 3px 0;
