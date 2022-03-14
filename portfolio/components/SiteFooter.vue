@@ -1,11 +1,14 @@
 <template>
   <section id="footer">
-    <h3>coltoge.com</h3>
+    <div class="info">
+      <div class="icons">
+        <a href="https://github.com/yejun614" target="_blink">
+          <i class="im im-github" aria-hidden="true" />
+        </a>
+      </div>
 
-    <div class="icons">
-      <a href="https://github.com/yejun614" target="_blink">
-        <i class="im im-github" aria-hidden="true" />
-      </a>
+      <h3>coltoge.com</h3>
+      <p>&copy; Copyright 2022 YeJun, Jung All rights reserved.</p>
     </div>
   </section>
 </template>
@@ -18,24 +21,45 @@ export default {
 
 <style>
   #footer {
-    min-height: fit-content;
+    height: 200px;
+    margin: 250px 0 0 0 !important;
+    padding-top: 100px;
 
-    background-color: #333;
-    margin-bottom: 0 !important;
+    background: #3B82BF;
+  }
 
+  #footer .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    padding: 100px 0;
   }
 
-  #footer h3 {
-    color: #555;
-  }
-
-  #footer .icons a {
+  #footer .info .icons a {
     color: white;
   }
 
-  #footer h3 {
-    margin-bottom: 50px;
+  #footer .info h3 {
+    color: rgba(255,255,255,.5);
+    font-weight: normal;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  #footer p {
+    color: rgba(255,255,255,.8);
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .waves {
+      max-height: 150px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .waves {
+      max-height: 180px;
+    }
   }
 </style>

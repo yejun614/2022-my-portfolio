@@ -34,37 +34,13 @@ export default {
     text-decoration: blink;
   }
 
-  .coltoge-logo:hover {
-    background-color: coral;
-  }
-
-  .coltoge-logo:hover a {
-    color: white;
-  }
-
   @media screen and (min-width: 600px) {
-    .coltoge-logo {
-      height: 25px;
-      padding: 3px 20px;
-      margin: 10px;
-
-      border: 2px solid coral;
-    }
-
     .coltoge-logo a {
       font-size: 12px;
     }
   }
 
   @media screen and (min-width: 1000px) {
-    .coltoge-logo {
-      height: 30px;
-      padding: 3px 20px;
-      margin: 20px;
-
-      border: 3px solid coral;
-    }
-
     .coltoge-logo a {
       font-size: 15px;
     }

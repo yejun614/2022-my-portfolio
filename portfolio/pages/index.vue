@@ -15,6 +15,8 @@
       <MySkills />
 
       <SiteFooter />
+
+      <ScrollTop v-if="isScrollTop" />
     </content>
   </div>
 </template>
@@ -22,11 +24,23 @@
 <script>
 export default {
   name: 'IndexPage',
+  data () {
+    return {
+      isScrollTop: false
+    }
+  },
   mounted () {
     document.addEventListener('scroll', () => this.scrolling())
   },
   methods: {
     scrolling () {
+      const scrollY = window.scrollY
+
+      if (scrollY > window.innerHeight / 2) {
+        this.isScrollTop = true
+      } else {
+        this.isScrollTop = false
+      }
     }
   }
 }
@@ -84,6 +98,7 @@ export default {
 
   content {
     top: 100%;
+    background-color: #f3f8ff;
   }
 
   content section {
