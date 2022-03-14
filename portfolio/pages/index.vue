@@ -10,6 +10,7 @@
       </header>
 
       <MyProfile />
+      <MyValue />
       <MyWorks />
       <MySkills />
 
