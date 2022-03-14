@@ -42,8 +42,8 @@ export default {
   }
 
   #my-value .box {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 
     padding: 10px;
     margin: 10px;
@@ -59,6 +59,28 @@ export default {
   }
 
   #my-value .box span {
-    font-size: 15px;
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 600px) {
+    #my-value .box {
+      width: 200px;
+      height: 200px;
+    }
+
+    #my-value .box span {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    #my-value .box {
+      width: 250px;
+      height: 250px;
+    }
+
+    #my-value .box span {
+      font-size: 15px;
+    }
   }
 </style>

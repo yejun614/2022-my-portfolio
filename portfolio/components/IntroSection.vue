@@ -163,8 +163,8 @@ export default {
   }
 
   #welcome-typing-title .circle {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     background-color: black;
     border-radius: 50%;
 
@@ -191,6 +191,11 @@ export default {
       margin-left: -64px;
     }
 
+    #welcome-typing-title .circle {
+      width: 12px;
+      height: 12px;
+    }
+
     #welcome-typing {
       width: 600px;
       height: 200px;
@@ -205,6 +210,11 @@ export default {
   @media screen and (min-width: 1000px) {
     #logo {
       margin-left: -73px;
+    }
+
+    #welcome-typing-title .circle {
+      width: 15px;
+      height: 15px;
     }
 
     #welcome-typing {
