@@ -21,12 +21,12 @@
 
         <tr>
           <td>관심 분야</td>
-          <td>웹 사이트 제작, 클라우드, 데이터 엔지니어링</td>
+          <td>웹 개발, 게임 개발, 클라우드, 인공지능</td>
         </tr>
       </table>
 
       <div class="back">
-        <span>I am YEJUN, JUNG</span>
+        <span>I am YEJUN, JUNG !</span>
       </div>
     </div>
 
