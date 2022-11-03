@@ -28,7 +28,10 @@ export default {
         { id: 2, name: 'Color Picker', color: '#012E40', href: 'https://codepen.io/yejun614/pen/bGgvvwy' },
         { id: 3, name: 'Color Code Convertor', color: '#FF9454', href: 'https://codepen.io/yejun614/pen/dyNjdeb' },
         { id: 4, name: 'Algorithm', color: '#E8704D', href: 'https://github.com/yejun614/algorithm-solve' },
-        { id: 5, name: 'Arduino Education', color: '#F25C05', href: 'https://github.com/yejun614/Arduino-Structure-and-Design' }
+        { id: 5, name: 'Arduino Education', color: '#F25C05', href: 'https://github.com/yejun614/Arduino-Structure-and-Design' },
+        { id: 5, name: 'My Highlight', color: '#92C0A0', href: 'https://yejun614.github.io/my-highlight/' },
+        { id: 5, name: 'Fuzzy Cluster Means', color: '#519B68', href: 'https://github.com/yejun614/fuzzy-cluster-means' },
+        { id: 5, name: 'Genetic Algorithm', color: '#306D43', href: 'https://github.com/yejun614/genetic-algorithm-example' }
       ]
     }
   },
