@@ -34,6 +34,11 @@
       <p>코딩을 좋아하는 평범한 대학생 입니다.</p>
       <p>새로운 기술을 공부할 때는 항상 토이 프로젝트를 만들어서 실제로 적용해보는 편입니다.</p>
     </div>
+
+    <div class="click-me">
+      <span class="text">Click Me</span>
+      <img class="arrow-img" src="arrow.png">
+    </div>
   </section>
 </template>
 
@@ -54,8 +59,15 @@ export default {
 </script>
 
 <style>
+  @keyframes click-me-rotate {
+    from { transform: rotate(-30deg); }
+    50%  { transform: rotate(-20deg); }
+    to   { transform: rotate(-30deg); }
+  }
+
   #my-profile {
     perspective: 600px;
+    /* position: relative; */
   }
 
   #my-profile .card {
@@ -137,6 +149,24 @@ export default {
     padding: 3px 0;
   }
 
+  .click-me {
+    display: none;
+    animation: click-me-rotate 1s infinite;
+  }
+
+  .click-me .arrow-img {
+    width: 150px;
+  }
+
+  .click-me .text {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+
+    transform: rotate(50deg) translate(15px, -10px);
+  }
+
   @media screen and (min-width: 600px) {
     #my-profile td {
       padding: 3px 12px;
@@ -145,6 +175,13 @@ export default {
 
     #my-profile .messages p {
       font-size: 15px;
+    }
+
+    .click-me {
+      display: inline;
+      position: absolute;
+      top: 250px;
+      margin-right: 700px;
     }
   }
 
@@ -156,6 +193,10 @@ export default {
 
     #my-profile .messages p {
       font-size: 20px;
+    }
+
+    .click-me {
+      margin-right: 900px;
     }
   }
 </style>
