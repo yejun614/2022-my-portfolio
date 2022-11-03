@@ -176,12 +176,18 @@ export default {
     #my-profile .messages p {
       font-size: 15px;
     }
+  }
 
+  @media screen and (min-width: 800px) {
     .click-me {
       display: inline;
       position: absolute;
       top: 250px;
-      margin-right: 700px;
+      margin-right: 630px;
+    }
+
+    .click-me .arrow-img {
+      width: 100px;
     }
   }
 
@@ -196,7 +202,7 @@ export default {
     }
 
     .click-me {
-      margin-right: 900px;
+      margin-right: 800px;
     }
   }
 </style>
