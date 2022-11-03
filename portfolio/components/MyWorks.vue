@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       items: [
-        { id: 0, name: 'Tetris Game', color: '#05C7F2', href: 'https://yejun614.github.io/html5-games/games/tetris/' },
+        { id: 0, name: 'Tetris Game', color: '#3b658a', href: 'https://yejun614.github.io/html5-games/games/tetris/' },
         { id: 1, name: 'Calendar', color: '#03588C', href: 'https://codepen.io/yejun614/pen/yLgwEJG' },
         { id: 2, name: 'Color Picker', color: '#012E40', href: 'https://codepen.io/yejun614/pen/bGgvvwy' },
         { id: 3, name: 'Color Code Convertor', color: '#FF9454', href: 'https://codepen.io/yejun614/pen/dyNjdeb' },
