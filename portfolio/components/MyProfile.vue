@@ -178,7 +178,7 @@ export default {
     }
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 820px) {
     .click-me {
       display: inline;
       position: absolute;
