@@ -1,6 +1,6 @@
 <template>
   <a id="scroll-top" href="#intro">
-    <i class="im im-care-up" aria-hidden="true" />
+    <img class="arrow-up" src="icons/arrow-up.png">
   </a>
 </template>
 
@@ -20,7 +20,7 @@ export default {
     width: 40px;
     height: 40px;
     background-color: coral;
-    border: 3px solid coral;
+    border: 5px solid coral;
     opacity: 0;
 
     position: fixed;
@@ -40,14 +40,14 @@ export default {
     background-color: rgba(0,0,0,0);
   }
 
-  #scroll-top .im {
-    color: white;
-    font-size: 17px;
+  #scroll-top .arrow-up {
+    width: 80%;
+    filter: grayscale(1) brightness(0) invert(1);
 
     transition: color 300ms ease-in-out;
   }
 
-  #scroll-top:hover .im {
-    color: coral;
+  #scroll-top:hover .arrow-up {
+    filter: invert(0);
   }
 </style>
