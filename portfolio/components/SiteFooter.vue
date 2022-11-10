@@ -3,7 +3,7 @@
     <div class="info">
       <div class="icons">
         <a href="https://github.com/yejun614" target="_blink">
-          <i class="im im-github" aria-hidden="true" />
+          <img class="github-icon" src="icons/github.png">
         </a>
       </div>
 
@@ -35,8 +35,9 @@ export default {
     justify-content: space-between;
   }
 
-  #footer .info .icons a {
-    color: white;
+  #footer .github-icon {
+    width: 30px;
+    filter: grayscale(1) brightness(0) invert(1);
   }
 
   #footer .info h3 {
