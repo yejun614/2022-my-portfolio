@@ -2,8 +2,9 @@
   <div id="intro-section">
     <div class="background-video">
       <iframe
+        v-if="active"
         ref="background"
-        src=""
+        :src="currentBackgroundUrl"
         frameborder="0"
         allow="autoplay; fullscreen"
       />
@@ -16,6 +17,7 @@
     <div id="welcome-cover">
       <div id="welcome-typing">
         <TypingAnim
+          v-if="active"
           text="Hello!\nI'm YeJun and Software Engineer."
           :speed="50"
           :delay="2000"
@@ -38,8 +40,12 @@
 <script>
 export default {
   name: 'IntroSection',
+  props: {
+    active: Boolean
+  },
   data () {
     return {
+      currentBackgroundUrl: '',
       backgroundVideoes: [
         'https://player.vimeo.com/video/626985671?background=1&autoplay=1&loop=1&transparent=1',
         'https://player.vimeo.com/video/416330739?background=1&autoplay=1&loop=1&transparent=1',
@@ -60,7 +66,8 @@ export default {
       this.currentBackground++
       this.currentBackground %= this.backgroundVideoes.length
 
-      this.$refs.background.src = this.backgroundVideoes[this.currentBackground]
+      // this.$refs.background.src = this.backgroundVideoes[this.currentBackground]
+      this.currentBackgroundUrl = this.backgroundVideoes[this.currentBackground]
     }
   }
 }
