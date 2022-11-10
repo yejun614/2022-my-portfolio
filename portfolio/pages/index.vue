@@ -1,7 +1,7 @@
 <template>
   <div id="layout">
     <div id="intro">
-      <IntroSection />
+      <IntroSection :active="!isScrollTop" />
     </div>
 
     <content>
