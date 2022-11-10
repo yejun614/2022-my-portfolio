@@ -1,7 +1,7 @@
 <template>
   <div class="scroll-down">
     <span>PORTFOLIO</span>
-    <i class="im im-angle-down" aria-hidden="true" />
+    <img class="arrow-down" src="icons/arrow-down.png">
   </div>
 </template>
 
@@ -34,15 +34,27 @@ export default {
     margin: 5px 0;
   }
 
+  .arrow-down {
+    width: 10px;
+  }
+
   @media screen and (min-width: 600px) {
     .scroll-down {
       font-size: 15px;
+    }
+
+    .arrow-down {
+      width: 15px;
     }
   }
 
   @media screen and (min-width: 1000px) {
     .scroll-down {
       font-size: 20px;
+    }
+
+    .arrow-down {
+      width: 20px;
     }
   }
 </style>

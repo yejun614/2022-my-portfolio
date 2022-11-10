@@ -3,7 +3,7 @@
     <ul>
       <li v-for="item in items" :key="item.id">
         <a :href="item.url">
-          <i class="im" :class="item.icon" aria-hidden="true" />
+          <img class="icon" :src="item.src">
 
           <span>{{ item.name }}</span>
         </a>
@@ -18,11 +18,11 @@ export default {
   data () {
     return {
       items: [
-        { id: 0, name: 'Intro', url: '#intro', icon: 'im-home' },
-        { id: 1, name: 'Yejun', url: '#my-profile', icon: 'im-star' },
-        { id: 2, name: 'Value', url: '#my-value', icon: 'im-rocket' },
-        { id: 3, name: 'Works', url: '#my-works', icon: 'im-windows-o' },
-        { id: 4, name: 'Skills', url: '#my-skills', icon: 'im-layer' }
+        { id: 0, name: 'Intro', url: '#intro', src: 'icons/home.png' },
+        { id: 1, name: 'Yejun', url: '#my-profile', src: 'icons/star.png' },
+        { id: 2, name: 'Value', url: '#my-value', src: 'icons/rocket.png' },
+        { id: 3, name: 'Works', url: '#my-works', src: 'icons/window.png' },
+        { id: 4, name: 'Skills', url: '#my-skills', src: 'icons/layer.png' }
       ]
     }
   }
@@ -53,9 +53,15 @@ export default {
     padding-left: 10px;
   }
 
-  .top-nav ul li .im {
-    font-size: 15px;
+  .top-nav ul li a {
+    vertical-align: middle;
+  }
+
+  .top-nav ul li .icon {
+    width: 15px;
     margin-right: 1.5px;
+    filter: grayscale(1) brightness(0) invert(1);
+    transform: translateY(1px);
   }
 
   .top-nav ul li a {
@@ -71,7 +77,7 @@ export default {
   }
 
   @media screen and (min-width: 600px) {
-    .top-nav ul li .im {
+    .top-nav ul li .icon {
       display: none;
     }
 
@@ -83,8 +89,8 @@ export default {
   }
 
   @media screen and (min-width: 1000px) {
-    .top-nav ul li .im {
-      font-size: 13px;
+    .top-nav ul li .icon {
+      width: 13px;
       margin-right: 5px;
 
       display: inline;
